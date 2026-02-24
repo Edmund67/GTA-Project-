@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c0wtby37crvbg"]
+
+[node name="GTA" type="Node2D"]
+position = Vector2(23, -12)
