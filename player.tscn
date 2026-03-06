@@ -43,16 +43,17 @@ animations = [{
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -10)
-scale = Vector2(0.752467, 0.84375)
+position = Vector2(1, -9.25)
+scale = Vector2(0.752467, 0.796875)
 sprite_frames = SubResource("SpriteFrames_lhvu3")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.284607
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -5)
+position = Vector2(1, -5)
 shape = SubResource("CircleShape2D_4sjlk")
