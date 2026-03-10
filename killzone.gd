@@ -11,6 +11,7 @@ func _on_body_entered(body):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_timer_timeout():
+	Engine.time_scale = 0.5
 	get_tree().reload_current_scene()
 	
 	
