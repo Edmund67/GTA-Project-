@@ -6,12 +6,14 @@ extends Area2D
 func _on_body_entered(body):
 	print("You Died Cuh!")
 	Engine.time_scale = 0.5
+	body.get_node("CollisionShape2D").queue_free()
 	timer.start()
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _on_timer_timeout():
-	Engine.time_scale = 0.5
+	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()
 	
 	
