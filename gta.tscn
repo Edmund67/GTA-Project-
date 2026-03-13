@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0wtby37crvbg"]
+[gd_scene load_steps=15 format=3 uid="uid://c0wtby37crvbg"]
 
 [ext_resource type="PackedScene" uid="uid://01yoa6ouagmv" path="res://player.tscn" id="1_36mbe"]
+[ext_resource type="Script" uid="uid://dpn4ooehnn0ki" path="res://Scripts/game_manager.gd" id="1_t6qhj"]
 [ext_resource type="Texture2D" uid="uid://bxfmq6twk8ida" path="res://Sprites/sprites/world_tileset.png" id="2_pgwc7"]
 [ext_resource type="PackedScene" uid="uid://bpojdwwey25gs" path="res://Scenes/animatable_body_2d.tscn" id="3_egqdq"]
 [ext_resource type="PackedScene" uid="uid://d0lwjjd3vcuq" path="res://coin.tscn" id="4_e7l3e"]
 [ext_resource type="PackedScene" uid="uid://dex28ngxnwltc" path="res://killzone.tscn" id="5_1mmov"]
 [ext_resource type="PackedScene" uid="uid://xv6s0q11hh03" path="res://slime.tscn" id="6_isx5m"]
-[ext_resource type="FontFile" uid="uid://yhms3dmv5e45" path="res://Assets/fonts/PixelOperator8.ttf" id="7_a7kgr"]
+[ext_resource type="FontFile" uid="uid://yhms3dmv5e45" path="res://Fonts/fonts/PixelOperator8.ttf" id="7_a7kgr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_egqdq"]
 texture = ExtResource("2_pgwc7")
@@ -220,6 +221,10 @@ _data = {
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_isx5m"]
 
 [node name="GTA" type="Node2D"]
+
+[node name="Game Manager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_t6qhj")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(286, 83)
